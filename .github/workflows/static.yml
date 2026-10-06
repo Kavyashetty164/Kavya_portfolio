@@ -20,13 +20,13 @@ jobs:
 
       - name: Check required files
         run: |
-          test -f index.html
-          test -f style.css
-          test -f script.js
-          test -d assets
+          test -f Kavya_portfolio/index.html
+          test -f Kavya_portfolio/style.css
+          test -f Kavya_portfolio/script.js
+          test -d Kavya_portfolio/assets
 
       - name: Check JavaScript syntax
-        run: node --check script.js
+        run: node --check Kavya_portfolio/script.js
 
   deploy:
     name: Deploy to GitHub Pages
@@ -53,7 +53,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: './Kavya_portfolio'
 
       - name: Deploy to GitHub Pages
         id: deployment
