@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavya Shree G N — Software Developer</title>
+<meta name="description" content="Kavya Shree G N — full-stack developer and data analyst based in Bengaluru. React, Python, Flask, Power BI and machine learning.">
+<meta name="theme-color" content="#0c0b10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-top">INITIALIZING SYSTEM</div>
+  <div class="loader-center">
+    <div class="loader-name"><span class="a">KAVYA SHREE</span> <span class="b">G N</span></div>
+    <div class="loader-role">FULL-STACK DEVELOPER &amp; DATA ANALYST</div>
+    <div class="loader-count"><span id="loaderCount">0</span>%</div>
+  </div>
+  <div class="loader-bottom">
+    <div class="loader-lines"><i id="loaderBar"></i></div>
+    <div class="loader-meta"><span id="loaderStep">LOADING MODULES...</span><span>SECURE CONNECTION</span></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#home" class="brand">Kavya<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <a href="#contact" class="hire-btn">Hire Me</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</nav>
+
+<!-- ============ HERO — scroll-scrubbed ============
+     To get the 360° head-turn from the reference video, add a short clip of
+     yourself turning (e.g. assets/hero-turn.mp4) and put its path in
+     data-turn-video below. Without it, the hero animates the photo. -->
+<div class="hero-pin" id="home">
+  <header class="hero" id="hero" data-turn-video="">
+    <div class="hero-bg"></div>
+    <div class="hero-light" id="heroLight"></div>
+    <div class="hero-subject" id="heroSubject">
+      <img src="assets/kavya-cutout.webp" alt="Kavya Shree G N" id="heroImg" fetchpriority="high">
+    </div>
+    <div class="hero-vignette"></div>
+    <div class="hero-flash" id="heroFlash"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">HI, I'M <u>KAVYA</u></div>
+      <h1 class="hero-headline" id="heroHeadline">
+        <span class="line is-active"><span class="l1">CREATIVE</span><span class="l2">DEVELOPER</span></span>
+        <span class="line"><span class="l1 single">FULL STACK DEV</span></span>
+        <span class="line"><span class="l1">DATA</span><span class="l2">STORYTELLER</span></span>
+      </h1>
+    </div>
+
+    <div class="hero-side">
+      <div class="comment" id="heroComment">// TURNING IDEAS INTO REALITY</div>
+      <div class="desc" id="heroDesc">Available for hire. Building fast, responsive web applications using modern tech stacks.</div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="scrub">
+        <div class="scrub-label"><b>↓</b> SCROLL TO SCRUB TIMELINE</div>
+        <div class="scrub-track"><i id="scrubBar"></i></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-light">View My Work</a>
+        <a href="#contact" class="btn btn-dark">Contact Me</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section about">
+  <div class="wrap about-grid">
+    <div class="profile-stage">
+      <span class="halo halo-profile"></span>
+      <div class="lanyard" id="profileCard">
+        <div class="swing" id="idSwing">
+          <div class="strap"></div>
+          <i class="clip"></i>
+          <div class="id-card" id="idCard" aria-label="ID card — click to flip">
+            <div class="id-inner">
+              <div class="id-face id-front">
+                <i class="slot"></i>
+                <div class="id-photo"><img src="assets/kavya-card.jpg" alt="Kavya Shree G N" loading="lazy"></div>
+                <div class="id-name">Kavya Shree G N</div>
+                <div class="id-role">Full-Stack Developer · Data Analyst</div>
+                <div class="id-foot"><span class="id-open"><span class="dot"></span>Open to work</span><i class="barcode"></i></div>
+              </div>
+              <div class="id-face id-back">
+                <i class="slot"></i>
+                <div class="id-what">What I do</div>
+                <ul class="id-list">
+                  <li><span>01</span><div><b>Developer</b><small>React · Python · Flask</small></div></li>
+                  <li><span>02</span><div><b>Data Analyst</b><small>Power BI · SQL · Pandas</small></div></li>
+                  <li><span>03</span><div><b>Builder</b><small>Dashboards &amp; ML projects</small></div></li>
+                </ul>
+                <div class="id-foot"><span class="id-open">Bengaluru, India</span><i class="barcode"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-copy">
+      <div class="tag" data-reveal><span class="dot"></span>// SYSTEM PROFILE</div>
+      <h2 class="about-name" data-reveal>Hello, I'm<br><span>Kavya Shree G N</span></h2>
+      <p class="about-text" data-reveal>A passionate full-stack developer and data analyst dedicated to crafting clean, functional and scalable applications. MCA student and freelancer in Bengaluru — specialising in intuitive user experiences, robust backend logic and dashboards that turn raw data into decisions.</p>
+      <div class="stat-row" data-reveal-stagger>
+        <div class="stat-chip"><div class="big">Full-Stack</div><div class="small">ARCHITECTURE</div></div>
+        <div class="stat-chip"><div class="big">React &amp; Python</div><div class="small">CORE TECH</div></div>
+        <div class="stat-chip"><div class="big">Data Driven</div><div class="small">ANALYTICS</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="plum">
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section">
+  <div class="wrap section-head">
+    <div class="tag" data-reveal><span class="dot"></span>TECHNICAL STACK</div>
+    <h2 class="section-title" data-reveal>Technologies I Work With</h2>
+    <p class="section-sub" data-reveal>Full-stack expertise across modern web development, data analytics and machine learning.</p>
+  </div>
+  <div class="marquee-stage" data-reveal>
+    <div class="marquee" data-speed="34">
+      <div class="marquee-track">
+        <span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">JavaScript</span><span class="pill">React.js</span><span class="pill">Vite</span><span class="pill">Python</span><span class="pill">Flask</span><span class="pill">REST APIs</span><span class="pill">SQL</span><span class="pill">MySQL</span><span class="pill">SQLite</span><span class="pill">Java</span><span class="pill">Git &amp; GitHub</span>
+      </div>
+    </div>
+    <div class="marquee reverse" data-speed="40">
+      <div class="marquee-track">
+        <span class="pill">Power BI</span><span class="pill">Excel</span><span class="pill">Chart.js</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Machine Learning</span><span class="pill">scikit-learn</span><span class="pill">Computer Vision</span><span class="pill">OpenCV</span><span class="pill">Oracle Cloud</span><span class="pill">Data Structures</span><span class="pill">Data Visualisation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="work" class="work">
+  <div class="work-pin" id="workPin">
+    <div class="work-sticky">
+      <div class="wrap section-head">
+        <div class="tag" data-reveal><span class="dot"></span>// PORTFOLIO WORK</div>
+        <h2 class="section-title" data-reveal>Featured Engineering Projects</h2>
+      </div>
+      <div class="work-track" id="workTrack">
+        <div class="project-item"><span class="halo"></span>
+        <article class="project-card">
+          <div class="project-top"><span class="project-idx">// PROJECT 01</span><span class="project-cat">Full-Stack App</span></div>
+          <h3 class="project-name">SpendSmart</h3>
+          <p class="project-desc">A personal expense tracker with secure sign-up and login, budget management, a spending dashboard with charts, CSV export and user profiles — deployed live on Render.</p>
+          <div class="project-tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>Chart.js</span><span>HTML/CSS/JS</span></div>
+        </article></div>
+        <div class="project-item"><span class="halo"></span>
+        <article class="project-card">
+          <div class="project-top"><span class="project-idx">// PROJECT 02</span><span class="project-cat">Client Work</span></div>
+          <h3 class="project-name">Bhavana Clicks</h3>
+          <p class="project-desc">A photography booking and portfolio website built for a client — from component structure through responsive styling and animation.</p>
+          <div class="project-tags"><span>React.js</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Vite</span></div>
+        </article></div>
+        <div class="project-item"><span class="halo"></span>
+        <article class="project-card">
+          <div class="project-top"><span class="project-idx">// PROJECT 03</span><span class="project-cat">Computer Vision</span></div>
+          <h3 class="project-name">Face Recognition Attendance System</h3>
+          <p class="project-desc">Automates attendance tracking with real-time face recognition, backed by a Flask API and a relational database.</p>
+          <div class="project-tags"><span>Python</span><span>Flask</span><span>SQL</span><span>HTML/CSS/JS</span></div>
+        </article></div>
+        <div class="project-item"><span class="halo"></span>
+        <article class="project-card">
+          <div class="project-top"><span class="project-idx">// PROJECT 04</span><span class="project-cat">Simulation</span></div>
+          <h3 class="project-name">Elevator System Simulation</h3>
+          <p class="project-desc">Models real-world elevator dispatch and scheduling logic using core data structures for request handling.</p>
+          <div class="project-tags"><span>Stack</span><span>Queue</span><span>Priority Queue</span></div>
+        </article></div>
+        <div class="project-item"><span class="halo"></span>
+        <article class="project-card">
+          <div class="project-top"><span class="project-idx">// PROJECT 05</span><span class="project-cat">Data Analytics</span></div>
+          <h3 class="project-name">COVID-19 Vaccine Trend Analysis</h3>
+          <p class="project-desc">An interactive dashboard exploring global vaccination trends, built for visual, exploratory analysis.</p>
+          <div class="project-tags"><span>Power BI</span><span>Excel</span></div>
+        </article></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifications" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag" data-reveal><span class="dot"></span>// CREDENTIALS</div>
+      <h2 class="section-title" data-reveal>Certifications &amp; Experience</h2>
+    </div>
+    <div class="cert-grid" data-reveal-stagger>
+      <div class="cert-card"><span class="cert-no">// 01</span><div class="cert-name">AI/ML Intern</div><div class="cert-org">InternPe — AI fundamentals, ML basics, applied data analysis</div><span class="cert-year">Internship</span></div>
+      <div class="cert-card"><span class="cert-no">// 02</span><div class="cert-name">Oracle Cloud Infrastructure</div><div class="cert-org">Data Science Professional</div><span class="cert-year">Oracle</span></div>
+      <div class="cert-card"><span class="cert-no">// 03</span><div class="cert-name">Excel &amp; Power BI</div><div class="cert-org">Dell Technologies Certified</div><span class="cert-year">Dell</span></div>
+      <div class="cert-card"><span class="cert-no">// 04</span><div class="cert-name">Python Programming</div><div class="cert-org">Coursera</div><span class="cert-year">Coursera</span></div>
+      <div class="cert-card"><span class="cert-no">// 05</span><div class="cert-name">Java Programming Masterclass</div><div class="cert-org">Coursera</div><span class="cert-year">Coursera</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact">
+  <div class="contact-word" id="contactWord" aria-hidden="true">CONTACT</div>
+  <div class="wrap contact-grid" id="contactGrid">
+    <div class="dispatch-item" id="dispatchCard">
+    <span class="halo halo-contact"></span>
+    <div class="dispatch-card">
+            <div class="dispatch-head"><span class="mono">// LIVE DISPATCH NODE</span><i class="led green"></i></div>
+      <h2 class="contact-title">Let's Build Something Exceptional.</h2>
+      <p class="contact-sub">Fill out the transmission form or preview your live payload stream directly below.</p>
+      <a class="contact-mail" href="mailto:kavyamurthy2004@gmail.com"><span class="mono">// EMAIL ME</span><b>kavyamurthy2004@gmail.com</b></a>
+      <div class="json-preview">
+        <div class="l1">// payload_preview.json</div>
+        <div><span class="key">sender:</span> <span class="val empty" id="pvName">[Awaiting Name]</span></div>
+        <div><span class="key">email:</span> <span class="val empty" id="pvEmail">[Awaiting Email]</span></div>
+        <div><span class="key">message:</span> <span class="val empty" id="pvMsg">"[Awaiting Message]"</span><span class="caret"></span></div>
+      </div>
+    </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-field"><label for="fFirst">First Name</label><input type="text" id="fFirst" autocomplete="given-name"></div>
+        <div class="form-field"><label for="fLast">Last Name</label><input type="text" id="fLast" autocomplete="family-name"></div>
+      </div>
+      <div class="form-field"><label for="fEmail">Email Address</label><input type="email" id="fEmail" autocomplete="email"></div>
+      <div class="form-field"><label for="fMsg">Message</label><textarea id="fMsg" rows="5" placeholder="Type your message here..."></textarea></div>
+      <input type="text" name="_honey" id="fHoney" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <button type="submit" class="send-btn" id="sendBtn">Send Message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid" data-reveal-stagger>
+      <div class="footer-col">
+        <b>// System Architecture</b>
+        <span>Full-Stack Web Engineering</span>
+        <span>AI &amp; Machine Learning Solutions</span>
+        <span>Data Analytics &amp; Dashboards</span>
+      </div>
+      <div class="footer-col center">
+        <b>// Status</b>
+        <span class="green">Open to Opportunities</span>
+        <a href="#work">View Work</a>
+      </div>
+      <div class="footer-col right">
+        <b>// Engineering Index</b>
+        <a href="https://github.com/Kavyashetty164" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kavya-gn-1a6a30322" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="assets/Kavya-Resume.pdf" download="Kavya-Shree-GN-CV.pdf">Download CV</a>
+      </div>
+    </div>
+    <div class="footer-name-wrap"><div class="footer-name" id="footerName">KAVYA</div></div>
+    <div class="footer-bottom">
+      <div><b>Contact Transmission</b><span>© Kavya Shree G N | Built with HTML, CSS &amp; JavaScript</span></div>
+      <a href="mailto:kavyamurthy2004@gmail.com" class="mail-link">kavyamurthy2004@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.plum -->
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
