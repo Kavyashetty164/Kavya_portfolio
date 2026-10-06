@@ -259,9 +259,19 @@
     }
   }
   const menuBtn = $('#menuBtn');
+  const setMenuOpen = open => {
+    document.body.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
   menuBtn.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    menuBtn.setAttribute('aria-expanded', open);
+    setMenuOpen(!document.body.classList.contains('menu-open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+      setMenuOpen(false);
+      menuBtn.focus();
+    }
   });
 
   /* ---------- Smooth scrolling (desktop wheel + anchor links) ---------- */
@@ -292,8 +302,7 @@
   $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
     const id = a.getAttribute('href');
     const el = id.length > 1 && $(id);
-    document.body.classList.remove('menu-open');
-    menuBtn.setAttribute('aria-expanded', 'false');
+    setMenuOpen(false);
     if (!el) return;
     e.preventDefault();
     scrollToY(id === '#home' ? 0 : pageTop(el));
