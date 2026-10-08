@@ -217,7 +217,7 @@
     dispatchCard.style.setProperty('--ty', lerp(80, 0, e) + 'px');
     dispatchCard.style.setProperty('--op', e);
     const w = clamp((y + vh - pageTop(contactSec)) / (vh + contactSec.offsetHeight));
-    contactWord.style.transform = `translate3d(calc(-50% + ${(0.4 - w) * 30}vw),0,0)`;
+    contactWord.style.transform = `translate3d(calc(-50% + ${(0.4 - w) * 10}vw),0,0)`;
   }
 
   /* ---------- Skills marquee ---------- */
@@ -267,6 +267,7 @@
   menuBtn.addEventListener('click', () => {
     setMenuOpen(!document.body.classList.contains('menu-open'));
   });
+  navLinks.forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
       setMenuOpen(false);
