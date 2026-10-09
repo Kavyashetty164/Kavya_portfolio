@@ -43,7 +43,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-family:var(--display);font-weight:900;font-stretch:118%;letter-spacing:-.045em;line-height:.95}
 
 .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
-.tag .dot{width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 8px #fff}
+.tag .dot,
+.profile-badge .dot,
+.id-open .dot,
+.led.green{display:none!important;width:0;height:0;background:transparent;box-shadow:none;animation:none}
 .section-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;margin-bottom:clamp(44px,6vw,72px)}
 .section-title{font-size:clamp(34px,5.2vw,68px);color:#fff;text-shadow:0 0 30px rgba(255,255,255,.18)}
 .section-sub{color:var(--muted);font-size:clamp(14px,1.2vw,16px);max-width:560px}
@@ -178,8 +181,6 @@ body.ready .hero::after{animation:flashIn 1.8s var(--ease) .1s both}
 .profile-card img{width:100%;height:100%;object-fit:cover;border-radius:26px}
 .profile-badge{position:absolute;left:22px;right:22px;bottom:22px;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;
   font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.1em;background:rgba(18,17,22,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)}
-.profile-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.35}}
 /* ---------- Lanyard ID card ---------- */
 .lanyard{position:relative;z-index:1;width:min(330px,86%);display:flex;flex-direction:column;align-items:center}
 .swing{width:100%;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;transform-origin:50% 0;animation:idSwing 7s ease-in-out infinite}
@@ -202,7 +203,6 @@ body.ready .hero::after{animation:flashIn 1.8s var(--ease) .1s both}
 .id-role{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6d6877;margin-top:7px}
 .id-foot{margin-top:auto;padding-top:12px;border-top:1px solid rgba(21,19,26,.12);display:flex;align-items:center;justify-content:space-between;gap:10px}
 .id-open{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#4a4553}
-.id-open .dot{width:6px;height:6px;border-radius:50%;background:#1fb866;box-shadow:0 0 8px #1fb866;animation:pulse 2s infinite}
 .barcode{display:block;width:76px;height:24px;background:repeating-linear-gradient(90deg,#15131a 0 2px,transparent 2px 4px,#15131a 4px 5px,transparent 5px 8px,#15131a 8px 11px,transparent 11px 12px)}
 .id-what{font-family:var(--display);font-weight:900;font-stretch:112%;font-size:26px;letter-spacing:-.04em;margin:6px 0 18px}
 .id-list{list-style:none;display:flex;flex-direction:column;gap:16px}
@@ -246,7 +246,6 @@ body.ready .hero::after{animation:flashIn 1.8s var(--ease) .1s both}
 .pill:hover{background:#fff;color:#1a1520;text-shadow:none;transform:translateY(-3px);box-shadow:0 0 30px rgba(255,255,255,.4)}
 
 .led{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 8px rgba(255,255,255,.6)}
-.led.green{background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
 
 /* projects — horizontal, centre card highlighted */
 .work{position:relative}
